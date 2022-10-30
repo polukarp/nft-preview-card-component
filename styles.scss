@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+$mobile: 375px;
+$desktop: 1440px;
+
+$soft-blue: hsl(215, 51%, 70%);
+$cyan : hsl(178, 100%, 50%);
+
+$main-bg-color: hsl(217, 54%, 11%);
+$card-bg-color: hsl(216, 50%, 16%);
+$line-color: hsl(215, 32%, 27%);
+$white: hsl(0, 0%, 100%);
+
+$fz-sm: 0.9em;
+$fz-md: 1em;
+$fz-lg: 1.3em;
+$fz-xl: 1.5em;
+$fz-xxl: 1.7em;
+$fz-xxxl: 2.1em;
+
+body {
+    margin: 0;
+    font-family: Outfit, sans-serif;
+    font-size: $fz-md;
+    padding: 2em 1em;
+    background-color: $main-bg-color;
+}
+
+
+.card {
+    margin: 0 auto;
+    max-width: 325px;
+    display: flex;
+    padding: 1.2em;
+    border-radius: 1em;
+    overflow: hidden;
+    flex-direction: column;
+    background-color: $card-bg-color;
+    color: $soft-blue;
+
+    &__image {
+        border-radius: .3em;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__name {
+        margin: 10px 0;
+        color: $white;
+        font-size: $fz-lg;
+    }
+    &__description {
+        margin-bottom: 15px;
+        font-size: $fz-sm;
+        color: $soft-blue;
+        font-weight: 300;
+    }
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $fz-md;
+        margin-bottom: 10px;
+    }
+    &__price {
+        color: $cyan;
+        &::before {
+            margin-right: 5px;
+            content: url('./images/icon-ethereum.svg');
+        }
+    }
+    &__date {
+        &::before {
+            margin-right: 5px;
+            content: url('./images/icon-clock.svg');
+        }
+
+    }
+    &__creator {
+        border-top: 1px solid $line-color;
+        display: flex;
+        align-items: center;
+    }
+}
+
+
+.card__creator {
+    padding-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.creator__avatar {
+    max-width: 40px;
+    border-radius: 50%;
+    border: 1px solid $white;
+}
+.creator__credits {
+}
+
+.name {
+    color: $white;
+}

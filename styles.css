@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+body {
+  margin: 0;
+  font-family: Outfit, sans-serif;
+  font-size: 1em;
+  padding: 2em 1em;
+  background-color: #0d192b;
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 325px;
+  display: flex;
+  padding: 1.2em;
+  border-radius: 1em;
+  overflow: hidden;
+  flex-direction: column;
+  background-color: #14253d;
+  color: #8bacda;
+}
+
+.card__image {
+  border-radius: .3em;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__name {
+  margin: 10px 0;
+  color: white;
+  font-size: 1.3em;
+}
+
+.card__description {
+  margin-bottom: 15px;
+  font-size: 0.9em;
+  color: #8bacda;
+  font-weight: 300;
+}
+
+.card__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.card__price {
+  color: #00fff7;
+}
+
+.card__price::before {
+  margin-right: 5px;
+  content: url("./images/icon-ethereum.svg");
+}
+
+.card__date::before {
+  margin-right: 5px;
+  content: url("./images/icon-clock.svg");
+}
+
+.card__creator {
+  border-top: 1px solid #2f415b;
+  display: flex;
+  align-items: center;
+}
+
+.card__creator {
+  padding-top: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+.creator__avatar {
+  max-width: 40px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.name {
+  color: white;
+}
