@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
 
-$mobile: 375px;
+$mobile: 325px;
 $desktop: 1440px;
 
 $soft-blue: hsl(215, 51%, 70%);
@@ -21,9 +21,13 @@ $fz-xxxl: 2.1em;
 
 body {
     margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
     font-family: Outfit, sans-serif;
     font-size: $fz-md;
-    padding: 2em 1em;
+
     background-color: $main-bg-color;
 }
 
@@ -67,15 +71,23 @@ body {
         margin-bottom: 10px;
     }
     &__price {
+        position: relative;
         color: $cyan;
+        margin-left: 20px;
         &::before {
+            position: absolute;
+            top: 1px;
+            left: -20px;
             margin-right: 5px;
             content: url('./images/icon-ethereum.svg');
         }
     }
     &__date {
+        position: relative;
         &::before {
-            margin-right: 5px;
+            position: absolute;
+            top: 1px;
+            left: -20px;
             content: url('./images/icon-clock.svg');
         }
 
